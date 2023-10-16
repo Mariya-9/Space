@@ -1,0 +1,163 @@
+.navWrap {
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  height: 60px;
+
+  max-width: 60px;
+
+  border: 5px solid #fff;
+  background-color: rgb(255, 249, 215, 0.9);
+}
+
+input#navToggle {
+  display: none;
+}
+
+input#navToggle ~ label {
+  position: relative;
+  padding: 2.25rem;
+  width: 2rem;
+  height: 1.25rem;
+
+  margin-top: 1rem;
+  margin-left: -1.2rem;
+}
+
+input#navToggle ~ label > span,
+input#navToggle ~ label > span::before,
+input#navToggle ~ label > span::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0.5rem;
+  right: 1.2rem;
+  height: 0.125rem;
+  width: 1rem;
+  opacity: 1;
+  background: #0f0f0f;
+  transition: 0.14s ease-in-out;
+}
+
+input#navToggle ~ label > span::before {
+  right: 0;
+  top: -0.4rem;
+}
+
+input#navToggle ~ label > span::after {
+  right: 0rem;
+  top: 0.4rem;
+}
+
+#navToggle:checked ~ label > span {
+  width: 0;
+  background: rgba(18, 18, 18, 0);
+}
+
+#navToggle:checked ~ label > span::before {
+  transform: rotateZ(45deg);
+  top: 0;
+}
+
+#navToggle:checked ~ label > span::after {
+  transform: rotateZ(-45deg);
+  top: 0;
+}
+
+#navToggle:checked ~ nav {
+  left: 0;
+}
+
+nav {
+  position: absolute;
+  z-index: -1;
+  top: 4rem;
+  left: -1300%;
+  width: 100%;
+  transition: 0.3s ease-in-out;
+}
+
+nav::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  height: 50vh;
+  width: 90vw;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  background-size: cover;
+  border-radius: 0 0 100px 100px;
+
+  margin: auto;
+  margin-top: 0.5rem;
+}
+
+nav ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  list-style: none;
+}
+nav ul li a {
+  width: 90%;
+  padding: 0.75rem 1rem;
+  border-bottom: solid 1px rgb(224, 229, 235, 0.1);
+  margin: auto;
+  text-decoration: none;
+  transition: 0.14s ease-in-out;
+
+  /* font-size: 1.5rem; */
+  color: #fff;
+}
+
+nav ul li a:hover {
+  margin: auto;
+  color: #beadfa;
+  background-color: rgb(224, 229, 235, 0.1);
+}
+
+nav ul li:last-of-type::before {
+  content: "";
+  display: block;
+  padding: 0.5rem;
+}
+
+.space-heading {
+  display: none;
+}
+
+.space-heading-Humburger {
+  display: block;
+  font-size: 2rem;
+}
+
+/* DROPDOWN MENU START */
+
+#dropdown-list {
+  width: 90vw;
+  margin-left: -3.5rem;
+  padding-left: 1.3rem;
+  width: 12.5rem;
+}
+
+.dropdown-menu li {
+  width: 34.4rem;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  text-align: center;
+}
+
+.dropdown-menu li:hover {
+  background-color: rgb(250, 227, 146);
+}
+
+.dropdown-nav-list {
+  width: 90vw;
+  padding-left: 2.5em;
+  padding: 1rem;
+}
+
+/* DROPDOWN MENU END */
