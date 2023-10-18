@@ -82,7 +82,7 @@ nav::after {
   position: absolute;
   top: 0;
   z-index: -1;
-  height: 50vh;
+  height: 90vh;
   width: 90vw;
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(15px);
@@ -100,6 +100,7 @@ nav ul li {
   text-decoration: none;
   list-style: none;
 }
+
 nav ul li a {
   width: 90%;
   padding: 0.75rem 1rem;
@@ -135,23 +136,22 @@ nav ul li:last-of-type::before {
 
 /* DROPDOWN MENU START */
 
-#dropdown-list {
+/* #dropdown-list {
   width: 90vw;
   margin-left: -3.5rem;
   padding-left: 1.3rem;
   width: 12.5rem;
-}
+} */
 
 .dropdown-menu li {
-  width: 34.4rem;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
   text-align: center;
 }
 
 .dropdown-menu li:hover {
   background-color: rgb(250, 227, 146);
+  width: 90vw;
+  justify-content: center;
+  text-align: center;
 }
 
 .dropdown-nav-list {
